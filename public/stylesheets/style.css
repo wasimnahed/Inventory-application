@@ -1,0 +1,46 @@
+body {
+  height: 100vh;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#nav-container{
+  padding: 0;
+}
+
+#nav-bar {
+  width: 80%;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.content {
+  margin-top: 30px;
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.list-item {
+  margin-top: 10px;
+  font-size: larger;
+}
+
+.list-link {
+  color: #64748c;
+  font-size: large;
+  text-decoration-line: none;
+}
+
+p {
+  font-size: large;
+}
+
+label {
+  font-size: medium;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

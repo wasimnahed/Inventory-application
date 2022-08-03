@@ -1,0 +1,13 @@
+extends layout
+
+block content 
+  div(class='container-fluid bg-light content-container')
+    div(class='row')
+      div(class='col-sm-8 content')
+        h1 #{title}
+        p Manage your inventory items here.
+        ul(class='index-page') 
+          li.list-item #[strong Items:] #{total_items}
+          li.list-item #[strong Categories:] #{total_categories}
+
+

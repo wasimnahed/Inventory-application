@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+  div(class='container-fluid bg-light content-container')
+    div(class='row')
+      div(class='col-sm-8 content')
+        h1 #{title}: 
+          span(style='color: #64748c') #{item.name}
+
+        p Do you really want to delete this item?
+
+        form(method='POST', action='')
+          div.form-group
+            input.form-control(type='hidden', name='itemId', required=true, value=item._id)
+
+          button.btn.btn-dark.submit-btn(type='submit') Delete

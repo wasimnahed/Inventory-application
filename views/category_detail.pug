@@ -1,0 +1,24 @@
+extends layout 
+
+block content 
+  div(class='container-fluid bg-light content-container')
+    div(class='row')
+      div(class='col-sm-8 content')
+        h1 #{category.name}
+        p #[strong Description:] #{category.description}
+
+        h4 Items 
+
+        dl
+          for item in category_items
+            dt 
+              a(href=item.url, class='list-link') #{item.name}
+            dd #{item.description}
+          else 
+            p This category has no items.
+
+        hr
+        p 
+          a(href=category.url + '/delete', class='list-link') Delete Category
+        p 
+          a(href=category.url + '/update', class='list-link') Update Category

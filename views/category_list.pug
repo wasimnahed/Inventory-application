@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+  div(class='container-fluid bg-light content-container')
+    div(class='row')
+      div(class='col-sm-8 content')
+        h1 #{title}
+        p Manage your inventory items here.
+        ul 
+          each category in category_list 
+            li.list-item 
+              a(href=category.url, class='list-link') #{category.name}
+          else 
+            li.list-item There are no categories available. Add some!
+
+        p 
+          a(href='/groceries/category/create', class='list-link') Create New Category

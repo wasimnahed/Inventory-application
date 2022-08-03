@@ -1,0 +1,22 @@
+extends layout 
+
+block content 
+  div(class='container-fluid bg-light content-container')
+    div(class='row')
+      div(class='col-sm-8 content')
+        h1 #{item.name}
+        p #[strong Description:] #{item.description}
+        p #[strong Price:] #{item.price}
+        p #[strong In Stock:] #{item.number_in_stock}
+
+        p #[strong Category:]
+        each val, index in item.category
+          a(href=val.url, class='list-link') #{val.name}
+          if index < item.category.length - 1
+            |, 
+
+        hr
+        p 
+          a(href=item.url + '/delete', class='list-link') Delete Item
+        p 
+          a(href=item.url + '/update', class='list-link') Update Item
